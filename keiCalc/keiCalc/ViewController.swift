@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var mem: String = ""
+    var lastOperation: Int = 0	
 
     @IBOutlet weak var labelRES: UILabel!
     
@@ -94,6 +96,10 @@ class ViewController: UIViewController {
         
    }
 
+	private func calc(dbl: Double){
+		mem = dbl
+                labelRES.text = String(format: "%g", mem)
+	}
     
     @IBAction func btnAction(_ sender: UIButton) {
         let tag = sender.tag
@@ -107,21 +113,54 @@ class ViewController: UIViewController {
             labelRES.text = "0"
         case 101:   // смена знака
             if labelRES.text[0] == "-" {
-                
-            }
-            break
+            	labelRES.text = labelRES.text.suffix(labelRES.text.count-1)
+            } else {
+		labelRES.text = "-"+labelRES.text
+	    }
         case 102:   //%
             break
         case 103:   // div
-            break
+		// если не ноль
+		if labelRES.text!="0" {
+			if mem != "" {
+				//в памяти есть предыдущее число - вычисляем результат
+				calc(mem.doubleValue / labelRES.text.doubleValue)
+			} else {
+				mem = labelRES.text
+				labelRES.text = "0"
+			}
+		}
         case 104:   // mul
-            break
-        case 105:   // sum
-            break
+		if mem == "" {
+			mem = labelRES.text
+			labelRES.text = "0"
+			lastOperation = 104
+		} else {
+	            calc(mem.doubleValue * labelRES.text.doubleValue)
+		}
+        case 105:   // sub
+		if mem == "" {
+			mem = labelRES.text
+			labelRES.text = "0"
+			lastOperation = 105
+		} else {
+	            calc(mem.doubleValue - labelRES.text.doubleValue)
+		}
         case 106:   // sum
-            break
+		if mem == "" {
+			mem = labelRES.text
+			labelRES.text = "0"
+			lastOperation = 106
+		} else {
+	            calc(mem.doubleValue + labelRES.text.doubleValue)
+		}
         case 107:   // =
-            break
+		if mem != "" {
+		        switch tag {
+			case 106: calc(mem.doubleValue + labelRES.text.doubleValue)
+			default: break
+			}
+		}
         case 108:   // .
             break
         default:
