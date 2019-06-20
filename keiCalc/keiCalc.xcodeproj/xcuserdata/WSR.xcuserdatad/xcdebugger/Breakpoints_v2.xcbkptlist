@@ -10,27 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keiCalc/ViewController.swift"
-            timestampString = "582711566.682356"
+            timestampString = "582712698.346189"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "ViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "keiCalc/ViewController.swift"
-            timestampString = "582711566.6827739"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "btnAction(_:)"
             landmarkType = "7">
             <Locations>
@@ -119,11 +103,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keiCalc/ViewController.swift"
-            timestampString = "582711566.683006"
+            timestampString = "582712698.346493"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "btnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,11 +119,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keiCalc/ViewController.swift"
-            timestampString = "582711566.6832269"
+            timestampString = "582712698.3467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "calc(dbl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -151,11 +135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keiCalc/ViewController.swift"
-            timestampString = "582711566.68357"
+            timestampString = "582712698.3469011"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "btnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -167,11 +151,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keiCalc/ViewController.swift"
-            timestampString = "582711566.683832"
+            timestampString = "582712698.347096"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "btnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -183,11 +167,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keiCalc/ViewController.swift"
-            timestampString = "582711566.684052"
+            timestampString = "582712698.347294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "btnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -199,11 +183,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "keiCalc/ViewController.swift"
-            timestampString = "582711566.68426"
+            timestampString = "582712698.347481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "btnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>

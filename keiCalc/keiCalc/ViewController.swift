@@ -10,28 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
-    @IBOutlet weak var labelRES: UILabel!
     
-    @IBOutlet weak var outletPM: UIButton!
-    @IBOutlet weak var outletAC: UIButton!
-    @IBOutlet weak var outletPC: UIButton!
-    @IBOutlet weak var outletDIV: UIButton!
-    @IBOutlet weak var outlet7: UIButton!
-    @IBOutlet weak var outlet8: UIButton!
-    @IBOutlet weak var outlet9: UIButton!
-    @IBOutlet weak var outlet4: UIButton!
-    @IBOutlet weak var outlet5: UIButton!
-    @IBOutlet weak var outlet6: UIButton!
-    @IBOutlet weak var outlet1: UIButton!
-    @IBOutlet weak var outlet2: UIButton!
-    @IBOutlet weak var outlet3: UIButton!
-    @IBOutlet weak var outletMUL: UIButton!
-    @IBOutlet weak var outletSUB: UIButton!
-    @IBOutlet weak var outletSUM: UIButton!
-    @IBOutlet weak var outletRES: UIButton!
-    @IBOutlet weak var outlet0: UIButton!
-    @IBOutlet weak var outletP: UIButton!
+    @IBOutlet var outletCollection: [UIButton]!
+    @IBOutlet weak var labelRES: UILabel!
     
     private func setBorder(btn: UIButton){
         btn.layer.borderWidth = 0.5
@@ -40,28 +21,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        setBorder(btn: outletPM)
-        setBorder(btn: outletAC)
-        setBorder(btn: outletPC)
-        setBorder(btn: outletDIV)
-        setBorder(btn: outlet7)
-        setBorder(btn: outlet8)
-        setBorder(btn: outlet9)
-        setBorder(btn: outlet4)
-        setBorder(btn: outlet5)
-        setBorder(btn: outlet6)
-        setBorder(btn: outlet1)
-        setBorder(btn: outlet2)
-        setBorder(btn: outlet3)
-        setBorder(btn: outlet0)
-        setBorder(btn: outletP)
-        setBorder(btn: outletRES)
-        setBorder(btn: outletMUL)
-        setBorder(btn: outletSUB)
-        setBorder(btn: outletRES)
-        
-   }
+        // форматирую кнопки
+        for outlet in outletCollection {
+            outlet.layer.borderWidth = 1
+            outlet.layer.borderColor = UIColor.darkGray.cgColor
+        }
+    }
 
     var mem: Float? = nil
     var lastOperation: String = ""

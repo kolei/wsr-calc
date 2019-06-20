@@ -279,25 +279,25 @@
                     </view>
                     <connections>
                         <outlet property="labelRES" destination="2hM-85-bpL" id="CtJ-Ik-DcD"/>
-                        <outlet property="outlet0" destination="djv-ON-p4r" id="cRh-0r-nTf"/>
-                        <outlet property="outlet1" destination="e4A-P1-Hkv" id="t7r-fh-xcD"/>
-                        <outlet property="outlet2" destination="TRK-82-bev" id="b8U-Ji-qKO"/>
-                        <outlet property="outlet3" destination="hJF-kR-MHK" id="Lfu-Xc-wpo"/>
-                        <outlet property="outlet4" destination="U8b-IU-GNh" id="AaE-9B-qQx"/>
-                        <outlet property="outlet5" destination="FZe-jT-L4w" id="0hb-rv-MDF"/>
-                        <outlet property="outlet6" destination="iXz-g1-8Os" id="H65-NC-3pQ"/>
-                        <outlet property="outlet7" destination="hIp-rM-Ne4" id="YQL-dC-LOm"/>
-                        <outlet property="outlet8" destination="ehp-Ns-KSb" id="FC9-Ns-fw3"/>
-                        <outlet property="outlet9" destination="9XT-CV-bFj" id="iee-8r-1l4"/>
-                        <outlet property="outletAC" destination="emB-rx-RH6" id="f4t-Y0-WP6"/>
-                        <outlet property="outletDIV" destination="VMX-LZ-a0e" id="Iu8-v9-XCJ"/>
-                        <outlet property="outletMUL" destination="zD3-o9-zkE" id="TrS-0p-ToP"/>
-                        <outlet property="outletP" destination="sZP-Wt-Rcx" id="e6t-Wj-D1H"/>
-                        <outlet property="outletPC" destination="QPD-Vm-ogq" id="npP-7n-orP"/>
-                        <outlet property="outletPM" destination="meU-po-pd4" id="4Ny-aX-r3D"/>
-                        <outlet property="outletRES" destination="7ks-jS-Es6" id="XTh-pa-SaM"/>
-                        <outlet property="outletSUB" destination="zRS-H2-6O2" id="zka-GP-Bzz"/>
-                        <outlet property="outletSUM" destination="aAb-US-3Tm" id="yaN-rV-OVS"/>
+                        <outletCollection property="outletCollection" destination="emB-rx-RH6" collectionClass="NSMutableArray" id="amQ-OE-40Q"/>
+                        <outletCollection property="outletCollection" destination="meU-po-pd4" collectionClass="NSMutableArray" id="CoK-kn-HI3"/>
+                        <outletCollection property="outletCollection" destination="QPD-Vm-ogq" collectionClass="NSMutableArray" id="EXN-Bj-GJD"/>
+                        <outletCollection property="outletCollection" destination="VMX-LZ-a0e" collectionClass="NSMutableArray" id="Nm0-ZW-7HX"/>
+                        <outletCollection property="outletCollection" destination="hIp-rM-Ne4" collectionClass="NSMutableArray" id="9ND-l3-8TE"/>
+                        <outletCollection property="outletCollection" destination="ehp-Ns-KSb" collectionClass="NSMutableArray" id="cTv-aZ-bBz"/>
+                        <outletCollection property="outletCollection" destination="9XT-CV-bFj" collectionClass="NSMutableArray" id="Xe8-NK-cfS"/>
+                        <outletCollection property="outletCollection" destination="zD3-o9-zkE" collectionClass="NSMutableArray" id="i4u-Dw-oh9"/>
+                        <outletCollection property="outletCollection" destination="U8b-IU-GNh" collectionClass="NSMutableArray" id="ydv-QP-c6p"/>
+                        <outletCollection property="outletCollection" destination="FZe-jT-L4w" collectionClass="NSMutableArray" id="8Ht-qX-gRv"/>
+                        <outletCollection property="outletCollection" destination="iXz-g1-8Os" collectionClass="NSMutableArray" id="9JQ-wF-ikh"/>
+                        <outletCollection property="outletCollection" destination="zRS-H2-6O2" collectionClass="NSMutableArray" id="aRd-qC-DKz"/>
+                        <outletCollection property="outletCollection" destination="e4A-P1-Hkv" collectionClass="NSMutableArray" id="KC6-cD-Xah"/>
+                        <outletCollection property="outletCollection" destination="TRK-82-bev" collectionClass="NSMutableArray" id="JQj-Gu-29J"/>
+                        <outletCollection property="outletCollection" destination="hJF-kR-MHK" collectionClass="NSMutableArray" id="5EK-7v-f2A"/>
+                        <outletCollection property="outletCollection" destination="aAb-US-3Tm" collectionClass="NSMutableArray" id="Ddo-L3-xV2"/>
+                        <outletCollection property="outletCollection" destination="djv-ON-p4r" collectionClass="NSMutableArray" id="Tcb-gv-gzS"/>
+                        <outletCollection property="outletCollection" destination="sZP-Wt-Rcx" collectionClass="NSMutableArray" id="a1h-7i-xuf"/>
+                        <outletCollection property="outletCollection" destination="7ks-jS-Es6" collectionClass="NSMutableArray" id="C67-me-cGE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
