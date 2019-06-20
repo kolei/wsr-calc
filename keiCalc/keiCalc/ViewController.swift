@@ -33,65 +33,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var outlet0: UIButton!
     @IBOutlet weak var outletP: UIButton!
     
+    private func setBorder(btn: UIButton){
+        btn.layer.borderWidth = 0.5
+        btn.layer.borderColor = UIColor.darkGray.cgColor
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        outletPM.layer.borderWidth=1
-        outletPM.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outletAC.layer.borderWidth=1
-        outletAC.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outletPC.layer.borderWidth=1
-        outletPC.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outletDIV.layer.borderWidth=1
-        outletDIV.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet7.layer.borderWidth=1
-        outlet7.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet8.layer.borderWidth=1
-        outlet8.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet9.layer.borderWidth=1
-        outlet9.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet4.layer.borderWidth=1
-        outlet4.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet5.layer.borderWidth=1
-        outlet5.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet6.layer.borderWidth=1
-        outlet6.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet1.layer.borderWidth=1
-        outlet1.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet2.layer.borderWidth=1
-        outlet2.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet3.layer.borderWidth=1
-        outlet3.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outlet0.layer.borderWidth=1
-        outlet0.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outletP.layer.borderWidth=1
-        outletP.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outletRES.layer.borderWidth=1
-        outletRES.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outletMUL.layer.borderWidth=1
-        outletMUL.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outletSUB.layer.borderWidth=1
-        outletSUB.layer.borderColor = UIColor.darkGray.cgColor
-        
-        outletRES.layer.borderWidth=1
-        outletRES.layer.borderColor = UIColor.darkGray.cgColor
+        setBorder(btn: outletPM)
+        setBorder(btn: outletAC)
+        setBorder(btn: outletPC)
+        setBorder(btn: outletDIV)
+        setBorder(btn: outlet7)
+        setBorder(btn: outlet8)
+        setBorder(btn: outlet9)
+        setBorder(btn: outlet4)
+        setBorder(btn: outlet5)
+        setBorder(btn: outlet6)
+        setBorder(btn: outlet1)
+        setBorder(btn: outlet2)
+        setBorder(btn: outlet3)
+        setBorder(btn: outlet0)
+        setBorder(btn: outletP)
+        setBorder(btn: outletRES)
+        setBorder(btn: outletMUL)
+        setBorder(btn: outletSUB)
+        setBorder(btn: outletRES)
         
    }
 
@@ -128,8 +96,8 @@ class ViewController: UIViewController {
                 mem = text
                 labelRES.text = "0"
                 lastOperation = "%"
-            } else {
-                calc(dbl: (mem ?? 0) * text / 100)
+//            } else {
+//                calc(dbl: (mem ?? 0) * text / 100)
             }
         case 103:   // div
             // если не ноль
