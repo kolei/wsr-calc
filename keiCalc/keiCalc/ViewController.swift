@@ -9,8 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var mem: String = ""
-    var lastOperation: Int = 0	
+    
 
     @IBOutlet weak var labelRES: UILabel!
     
@@ -96,76 +95,119 @@ class ViewController: UIViewController {
         
    }
 
-	private func calc(dbl: Double){
+    var mem: Float? = nil
+    var lastOperation: String = ""
+    var startTyping: Bool = false
+    
+	private func calc(dbl: Float){
 		mem = dbl
-                labelRES.text = String(format: "%g", mem)
+        labelRES.text = String(format: "%g", dbl)
 	}
     
     @IBAction func btnAction(_ sender: UIButton) {
         let tag = sender.tag
         
+        var text = Float(labelRES.text ?? "") ?? 0
+        
+        
+        
         switch tag {
-        case 0:
-            if labelRES.text != "0" {
-                labelRES.text = (labelRES.text ?? "") + "0"
-            }
+        
         case 100:   //AC
             labelRES.text = "0"
+            mem = nil
+            lastOperation = ""
+            startTyping = false
         case 101:   // смена знака
-            if labelRES.text[0] == "-" {
-            	labelRES.text = labelRES.text.suffix(labelRES.text.count-1)
-            } else {
-		labelRES.text = "-"+labelRES.text
-	    }
+            if text>0.0 || text<0.0 {
+                text = -text
+                labelRES.text = String(format: "%g", text)
+            }
         case 102:   //%
-            break
+            if mem == nil {
+                mem = text
+                labelRES.text = "0"
+                lastOperation = "%"
+            } else {
+                calc(dbl: (mem ?? 0) * text / 100)
+            }
         case 103:   // div
-		// если не ноль
-		if labelRES.text!="0" {
-			if mem != "" {
-				//в памяти есть предыдущее число - вычисляем результат
-				calc(mem.doubleValue / labelRES.text.doubleValue)
-			} else {
-				mem = labelRES.text
-				labelRES.text = "0"
-			}
-		}
+            // если не ноль
+//            if text != 0 {
+//                if mem != nil {
+//                    //в памяти есть предыдущее число - вычисляем результат
+//                    let res = (mem ?? 0) / text
+//                    calc(dbl: res)
+//                } else {
+//                    mem = text
+//                    labelRES.text = "0"
+//                }
+//                lastOperation = "/"
+//            }
+            if mem == nil {
+                mem = text
+                labelRES.text = "0"
+                lastOperation = "/"
+                
+            }
         case 104:   // mul
-		if mem == "" {
-			mem = labelRES.text
-			labelRES.text = "0"
-			lastOperation = 104
-		} else {
-	            calc(mem.doubleValue * labelRES.text.doubleValue)
-		}
+            if mem == nil {
+                mem = text
+                labelRES.text = "0"
+                lastOperation = "*"
+//            } else {
+//                calc(dbl: (mem ?? 0) * text)
+            }
         case 105:   // sub
-		if mem == "" {
-			mem = labelRES.text
-			labelRES.text = "0"
-			lastOperation = 105
-		} else {
-	            calc(mem.doubleValue - labelRES.text.doubleValue)
-		}
+            if mem == nil {
+                mem = text
+                labelRES.text = "0"
+                lastOperation = "-"
+//            } else {
+//                calc(dbl: (mem ?? 0) - text)
+            }
         case 106:   // sum
-		if mem == "" {
-			mem = labelRES.text
-			labelRES.text = "0"
-			lastOperation = 106
-		} else {
-	            calc(mem.doubleValue + labelRES.text.doubleValue)
-		}
+            if mem == nil {
+                mem = text
+                labelRES.text = "0"
+                lastOperation = "+"
+//            } else {
+//                calc(dbl: (mem ?? 0) + text)
+            }
         case 107:   // =
-		if mem != "" {
-		        switch tag {
-			case 106: calc(mem.doubleValue + labelRES.text.doubleValue)
-			default: break
-			}
-		}
-        case 108:   // .
-            break
+            if mem != nil {
+                switch lastOperation {
+                    case "+":
+                        calc(dbl: (mem ?? 0) + text)
+                    case "-":
+                        calc(dbl: (mem ?? 0) - text)
+                    case "*":
+                        calc(dbl: (mem ?? 0)  * text)
+                    case "/":
+                        if text != 0 {
+                            calc(dbl: (mem ?? 0) / text)
+                        }
+                    case "%":
+                        calc(dbl: (mem ?? 0) * text / 100)
+                    default: break
+                }
+            }
+            lastOperation = ""
+            startTyping = false
+            mem = nil
+		case 108:   // .
+            if !(labelRES.text ?? "0").contains(".") {
+               labelRES.text = (labelRES.text ?? "0") + "."
+            }
+        case 0:
+            if !startTyping {
+                labelRES.text = "0"
+            } else if labelRES.text != "0" {
+                labelRES.text = (labelRES.text ?? "") + "0"
+            }
         default:
             if tag<100 {
-                if labelRES.text == "0" {
+                if labelRES.text == "0" || !startTyping {
                     labelRES.text = String(tag)
                 } else {
                     labelRES.text = (labelRES.text ?? "") + String(tag)
@@ -174,7 +216,9 @@ class ViewController: UIViewController {
             break
         }
         
-        
+        if tag != 107 {
+            startTyping = true
+        }
     }
     
 }
