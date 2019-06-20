@@ -42,8 +42,6 @@ class ViewController: UIViewController {
         
         var text = Float(labelRES.text ?? "") ?? 0
         
-        
-        
         switch tag {
         
         case 100:   //AC
@@ -61,22 +59,8 @@ class ViewController: UIViewController {
                 mem = text
                 labelRES.text = "0"
                 lastOperation = "%"
-//            } else {
-//                calc(dbl: (mem ?? 0) * text / 100)
             }
         case 103:   // div
-            // если не ноль
-//            if text != 0 {
-//                if mem != nil {
-//                    //в памяти есть предыдущее число - вычисляем результат
-//                    let res = (mem ?? 0) / text
-//                    calc(dbl: res)
-//                } else {
-//                    mem = text
-//                    labelRES.text = "0"
-//                }
-//                lastOperation = "/"
-//            }
             if mem == nil {
                 mem = text
                 labelRES.text = "0"
@@ -88,24 +72,18 @@ class ViewController: UIViewController {
                 mem = text
                 labelRES.text = "0"
                 lastOperation = "*"
-//            } else {
-//                calc(dbl: (mem ?? 0) * text)
             }
         case 105:   // sub
             if mem == nil {
                 mem = text
                 labelRES.text = "0"
                 lastOperation = "-"
-//            } else {
-//                calc(dbl: (mem ?? 0) - text)
             }
         case 106:   // sum
             if mem == nil {
                 mem = text
                 labelRES.text = "0"
                 lastOperation = "+"
-//            } else {
-//                calc(dbl: (mem ?? 0) + text)
             }
         case 107:   // =
             if mem != nil {
@@ -122,7 +100,8 @@ class ViewController: UIViewController {
                         }
                     case "%":
                         calc(dbl: (mem ?? 0) * text / 100)
-                    default: break
+                    default:
+                        break
                 }
             }
             lastOperation = ""
